@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/grokking-interview-javatled.iml" filepath="$PROJECT_DIR$/grokking-interview-javatled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/grokking-interview-java.iml" filepath="$PROJECT_DIR$/grokking-interview-java.iml" />
     </modules>
   </component>
 </project>

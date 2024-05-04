@@ -31,7 +31,5 @@ public class Main {
         dogs.add(dog2);
         dogs.add(dog3);
         animalChorus.animalSound(dogs);
-
-
     }
 }

@@ -10,6 +10,11 @@ public class Dog extends Animal implements VocalAnimal {
     }
 
     @Override
+    public void go() {
+        System.out.println("Dog " + name + " goes anyway");
+    }
+
+    @Override
     public void makeSound() {
         System.out.println("Dog " + name + " says: \"Woof Woof\"");
     }

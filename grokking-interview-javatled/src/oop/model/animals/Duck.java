@@ -13,6 +13,11 @@ public class Duck extends Animal implements FlyAnimal, VocalAnimal, SwimAnimal {
     }
 
     @Override
+    public void go() {
+        System.out.println("Duck " + name + " goes anyway");
+    }
+
+    @Override
     public void fly() {
         System.out.println("Duck " + name + " flays anyway");
     }

@@ -1,25 +1,25 @@
 package oop.model;
 
-import oop.interfaces.Animals;
-import oop.interfaces.registry.Registry;
+import oop.interfaces.registry.AnimalRegistry;
+import oop.model.animals.Animal;
 import oop.model.animals.Dog;
 import oop.model.animals.Duck;
 import oop.model.animals.Frog;
-import oop.model.registry.AnimalRegistry;
+import oop.model.registry.AnimalRegistryImpl;
 
 public class AnimalGod {
-    private final Registry<Animals> animalRegistry;
+    private final AnimalRegistry animalRegistry;
 
     public AnimalGod() {
-        this.animalRegistry = new AnimalRegistry();
+        this.animalRegistry = new AnimalRegistryImpl();
     }
 
-    public Registry<Animals> getAnimalRegistry() {
+    public AnimalRegistry getAnimalRegistry() {
         return animalRegistry;
     }
     //не нравится. Типов животных может быть огромное количество..
     public void createAnimal(String name, int age, AnimalsType animalsType) {
-        Animals animal = null;
+        Animal animal = null;
         switch (animalsType) {
             case DOG:
                 animal = new Dog(name, age);
@@ -30,6 +30,8 @@ public class AnimalGod {
             case FROG:
                 animal = new Frog(name, age);
                 break;
+            default:
+                throw new IllegalArgumentException("Неверный тип");
         }
         animalRegistry.add(animal);
     }

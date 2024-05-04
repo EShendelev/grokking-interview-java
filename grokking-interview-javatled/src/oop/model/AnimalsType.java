@@ -1,9 +1,9 @@
 package oop.model;
 
 public enum AnimalsType {
-    DOG(),
-    DUCK(),
-    FROG();
+    DOG,
+    DUCK,
+    FROG;
 
 
 

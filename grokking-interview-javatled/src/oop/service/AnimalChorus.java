@@ -1,17 +1,18 @@
 package oop.service;
 
-import oop.interfaces.Animals;
+import oop.interfaces.VocalAnimal;
+import oop.model.animals.Animal;
+import oop.model.animals.Duck;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
-public class AnimalChorus<T>{
+public class AnimalChorus{
 
-    public void animalSound(List<T> animals) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        for (T animal : animals) {
-            Method makeSound = animal.getClass().getMethod("makeSound");
-            makeSound.invoke(animal);
+    public void animalSound(List<? extends Animal> animals) {
+        for (Animal animal : animals) {
+            animal.go();
         }
     }
 }

@@ -5,8 +5,14 @@ import oop.interfaces.VocalAnimal;
 
 public class Frog extends Animal implements VocalAnimal, SwimAnimal {
 
+
     public Frog(String name, int age) {
         super(name, age);
+    }
+
+    @Override
+    public void go() {
+        System.out.println("Frog " + name + " goes anyway");
     }
 
     @Override

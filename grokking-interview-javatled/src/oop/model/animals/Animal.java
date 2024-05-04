@@ -1,13 +1,13 @@
 package oop.model.animals;
 
-import oop.interfaces.Animals;
-
-public abstract class Animal implements Animals {
-    String name;
-    int age;
+public abstract class Animal {
+    protected String name;
+    protected int age;
 
     public Animal(String name, int age) {
         this.name = name;
         this.age = age;
     }
+
+    public  abstract void go();
 }
